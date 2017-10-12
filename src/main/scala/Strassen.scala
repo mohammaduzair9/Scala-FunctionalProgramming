@@ -124,6 +124,13 @@ object Strassen {
     }
   }
 
+  def time(proc: => Array[Array[Int]]) = {
+    val start = System.currentTimeMillis
+    val res = proc
+    println((System.currentTimeMillis - start) + "msec.")
+    res
+  }
+
 
   def main(args:Array[String]):Unit = {
 
@@ -150,11 +157,11 @@ object Strassen {
       dispMat(matB)
 
       println("Result with Strassen Multiplication: ")
-      val result = strassen(matA, matB, baseDim)
+      val result = time(strassen(matA, matB, baseDim))
       dispMat(result)
 
       println("Result with Simple Multiplication: ")
-      val result2 = simpleMul(matA, matB)
+      val result2 = time(simpleMul(matA, matB))
       dispMat(result2)
     }
   }
