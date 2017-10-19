@@ -10,3 +10,4 @@ Implementation of basic tasks using Scala Functional Programming Paradigm.
   6. Define AND operation for two logical expressions.
   7. Define NAND operation for two logical expressions.
   8. Strassen Algorithm for Matrix Multiplication
+  9. SieveOfEratosthenes Algorithm.
